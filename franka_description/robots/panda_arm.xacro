@@ -54,11 +54,13 @@
       </collision>
 
       <!-- for simulation -->
-      <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="2.34" />
-        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3" />
-      </inertial>
+      <!-- Link 1 -->
+        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
+        <inertial> 
+            <origin xyz="-0.000828 0.004496 -0.292171" rpy="0 0 0" /> 
+            <mass value="1.654831"/> 
+            <inertia  ixx="0.637949" ixy="0.000056" ixz="0.000613" iyy="0.637409" iyz="-0.021115" izz="0.001173"  />
+        </inertial> 
       <!-- end for simulation -->
     </link>
     <joint name="${arm_id}_joint1" type="revolute">
@@ -86,11 +88,13 @@
       </collision>
 
       <!-- for simulation -->
-      <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="2.36" />
-        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3" />
-      </inertial>
+        <!-- Link 2 -->
+        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
+        <inertial> 
+            <origin xyz="0.003569 -0.027131 -0.014413" rpy="0 0 0" /> 
+            <mass value="8.107980"/> 
+            <inertia  ixx="0.024018" ixy="-0.003820" ixz="0.003154" iyy="0.016501" iyz="-0.012389" izz="0.025322"  />
+        </inertial>     
       <!-- end for simulation -->
     </link>
     <joint name="${arm_id}_joint2" type="revolute">
@@ -118,11 +122,13 @@
       </collision>
 
       <!-- for simulation -->
-      <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="2.38" />
-        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3" />
-      </inertial>
+        <!-- Link 3 -->
+        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
+        <inertial> 
+            <origin xyz="0.032833 -0.002029 -0.096799" rpy="0 0 0" /> 
+            <mass value="3.300138"/> 
+            <inertia  ixx="0.035301" ixy="0.011494" ixz="-0.016618" iyy="0.003726" iyz="-0.013031" izz="0.000000"  />
+        </inertial> 
       <!-- end for simulation -->
     </link>
     <joint name="${arm_id}_joint3" type="revolute">
@@ -150,11 +156,13 @@
       </collision>
 
       <!-- for simulation -->
-      <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="2.43" />
-        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3" />
-      </inertial>
+        <!-- Link 4 -->
+        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
+        <inertial> 
+            <origin xyz="-0.043407 0.128195 0.002060" rpy="0 0 0" /> 
+            <mass value="2.548403"/> 
+            <inertia  ixx="0.022739" ixy="-0.011128" ixz="0.003843" iyy="0.000000" iyz="0.007803" izz="0.028460"  />
+        </inertial> 
       <!-- end for simulation -->
     </link>
     <joint name="${arm_id}_joint4" type="revolute">
@@ -182,11 +190,13 @@
       </collision>
 
       <!-- for simulation -->
-      <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="3.5" />
-        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3" />
-      </inertial>
+        <!-- Link 5 -->
+        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
+        <inertial> 
+            <origin xyz="-0.000323 0.021146 -0.124488" rpy="0 0 0" /> 
+            <mass value="2.095362"/> 
+            <inertia  ixx="0.025776" ixy="0.003369" ixz="-0.010502" iyy="0.034795" iyz="0.002025" izz="0.000000"  />
+        </inertial> 
       <!-- end for simulation -->
     </link>
     <joint name="${arm_id}_joint5" type="revolute">
@@ -214,11 +224,13 @@
       </collision>
 
       <!-- for simulation -->
-      <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="1.47" />
-        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3" />
-      </inertial>
+        <!-- Link 6 -->
+        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
+        <inertial> 
+            <origin xyz="0.066189 -0.018040 -0.021379" rpy="0 0 0" /> 
+            <mass value="1.722535"/> 
+            <inertia  ixx="0.000104" ixy="-0.003459" ixz="0.002509" iyy="0.003188" iyz="0.001801" izz="0.000622"  />
+        </inertial> 
       <!-- end for simulation -->
     </link>
     <joint name="${arm_id}_joint6" type="revolute">
@@ -246,11 +258,13 @@
       </collision>
 
       <!-- for simulation -->
-      <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="0.45" />
-        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3" />
-      </inertial>
+        <!-- Link 7 -->
+        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
+        <inertial> 
+            <origin xyz="0.001859 0.007351 0.055465" rpy="0 0 0" /> 
+            <mass value="0.570636"/> 
+            <inertia  ixx="0.002852" ixy="0.004632" ixz="0.002398" iyy="0.000000" iyz="-0.002696" izz="0.000000"  />
+        </inertial> 
       <!-- end for simulation -->
     </link>
     <joint name="${arm_id}_joint7" type="revolute">
