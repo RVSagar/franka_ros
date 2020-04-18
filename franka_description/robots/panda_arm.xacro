@@ -9,17 +9,16 @@
       </joint>
     </xacro:unless>
 
-    <!-- for simulation -->
+    <xacro:property name="joint_damping" value="1.0"/>
+
     <link name="world" />
 
     <joint name="robot_to_world" type="fixed">
       <parent link="world" />
       <child link="${arm_id}_link0" />
       <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <dynamics damping="${joint_damping}"/>
     </joint>
-
-    <xacro:property name="joint_damping" value="1.0"/>
-    <!-- end for simulation -->
 
     <link name="${arm_id}_link0">
       <visual>
@@ -32,14 +31,11 @@
           <mesh filename="package://${description_pkg}/meshes/collision/link0.stl"/>
         </geometry>
       </collision>
-
-      <!-- for simulation -->
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="3.06" />
-        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="3.06"/>
+        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3"/>
       </inertial>
-      <!-- end for simulation -->
     </link>
     <link name="${arm_id}_link1">
       <visual>
@@ -52,16 +48,11 @@
           <mesh filename="package://${description_pkg}/meshes/collision/link1.stl"/>
         </geometry>
       </collision>
-
-      <!-- for simulation -->
-      <!-- Link 1 -->
-        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
-        <inertial> 
-            <origin xyz="-0.000828 0.004496 -0.292171" rpy="0 0 0" /> 
-            <mass value="1.654831"/> 
-            <inertia  ixx="0.637949" ixy="0.000056" ixz="0.000613" iyy="0.637409" iyz="-0.021115" izz="0.001173"  />
-        </inertial> 
-      <!-- end for simulation -->
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="2.34"/>
+        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint1" type="revolute">
       <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-2.8973" soft_upper_limit="2.8973"/>
@@ -70,10 +61,7 @@
       <child link="${arm_id}_link1"/>
       <axis xyz="0 0 1"/>
       <limit effort="87" lower="-2.8973" upper="2.8973" velocity="2.1750"/>
-
-      <!-- for simulation -->
       <dynamics damping="${joint_damping}"/>
-      <!-- end for simulation -->
     </joint>
     <link name="${arm_id}_link2">
       <visual>
@@ -86,16 +74,11 @@
           <mesh filename="package://${description_pkg}/meshes/collision/link2.stl"/>
         </geometry>
       </collision>
-
-      <!-- for simulation -->
-        <!-- Link 2 -->
-        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
-        <inertial> 
-            <origin xyz="0.003569 -0.027131 -0.014413" rpy="0 0 0" /> 
-            <mass value="8.107980"/> 
-            <inertia  ixx="0.024018" ixy="-0.003820" ixz="0.003154" iyy="0.016501" iyz="-0.012389" izz="0.025322"  />
-        </inertial>     
-      <!-- end for simulation -->
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="2.36"/>
+        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint2" type="revolute">
       <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-1.7628" soft_upper_limit="1.7628"/>
@@ -104,10 +87,7 @@
       <child link="${arm_id}_link2"/>
       <axis xyz="0 0 1"/>
       <limit effort="87" lower="-1.7628" upper="1.7628" velocity="2.1750"/>
-
-      <!-- for simulation -->
       <dynamics damping="${joint_damping}"/>
-      <!-- end for simulation -->
     </joint>
     <link name="${arm_id}_link3">
       <visual>
@@ -120,16 +100,11 @@
           <mesh filename="package://${description_pkg}/meshes/collision/link3.stl"/>
         </geometry>
       </collision>
-
-      <!-- for simulation -->
-        <!-- Link 3 -->
-        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
-        <inertial> 
-            <origin xyz="0.032833 -0.002029 -0.096799" rpy="0 0 0" /> 
-            <mass value="3.300138"/> 
-            <inertia  ixx="0.035301" ixy="0.011494" ixz="-0.016618" iyy="0.003726" iyz="-0.013031" izz="0.000000"  />
-        </inertial> 
-      <!-- end for simulation -->
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="2.38"/>
+        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint3" type="revolute">
       <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-2.8973" soft_upper_limit="2.8973"/>
@@ -138,10 +113,7 @@
       <child link="${arm_id}_link3"/>
       <axis xyz="0 0 1"/>
       <limit effort="87" lower="-2.8973" upper="2.8973" velocity="2.1750"/>
-
-      <!-- for simulation -->
       <dynamics damping="${joint_damping}"/>
-      <!-- end for simulation -->
     </joint>
     <link name="${arm_id}_link4">
       <visual>
@@ -154,16 +126,11 @@
           <mesh filename="package://${description_pkg}/meshes/collision/link4.stl"/>
         </geometry>
       </collision>
-
-      <!-- for simulation -->
-        <!-- Link 4 -->
-        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
-        <inertial> 
-            <origin xyz="-0.043407 0.128195 0.002060" rpy="0 0 0" /> 
-            <mass value="2.548403"/> 
-            <inertia  ixx="0.022739" ixy="-0.011128" ixz="0.003843" iyy="0.000000" iyz="0.007803" izz="0.028460"  />
-        </inertial> 
-      <!-- end for simulation -->
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="2.43"/>
+        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint4" type="revolute">
       <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-3.0718" soft_upper_limit="-0.0698"/>
@@ -172,10 +139,7 @@
       <child link="${arm_id}_link4"/>
       <axis xyz="0 0 1"/>
       <limit effort="87" lower="-3.0718" upper="-0.0698" velocity="2.1750"/>
-
-      <!-- for simulation -->
       <dynamics damping="${joint_damping}"/>
-      <!-- end for simulation -->
     </joint>
     <link name="${arm_id}_link5">
       <visual>
@@ -188,16 +152,11 @@
           <mesh filename="package://${description_pkg}/meshes/collision/link5.stl"/>
         </geometry>
       </collision>
-
-      <!-- for simulation -->
-        <!-- Link 5 -->
-        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
-        <inertial> 
-            <origin xyz="-0.000323 0.021146 -0.124488" rpy="0 0 0" /> 
-            <mass value="2.095362"/> 
-            <inertia  ixx="0.025776" ixy="0.003369" ixz="-0.010502" iyy="0.034795" iyz="0.002025" izz="0.000000"  />
-        </inertial> 
-      <!-- end for simulation -->
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="3.5"/>
+        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint5" type="revolute">
       <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-2.8973" soft_upper_limit="2.8973"/>
@@ -206,10 +165,7 @@
       <child link="${arm_id}_link5"/>
       <axis xyz="0 0 1"/>
       <limit effort="12" lower="-2.8973" upper="2.8973" velocity="2.6100"/>
-
-      <!-- for simulation -->
       <dynamics damping="${joint_damping}"/>
-      <!-- end for simulation -->
     </joint>
     <link name="${arm_id}_link6">
       <visual>
@@ -222,16 +178,11 @@
           <mesh filename="package://${description_pkg}/meshes/collision/link6.stl"/>
         </geometry>
       </collision>
-
-      <!-- for simulation -->
-        <!-- Link 6 -->
-        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
-        <inertial> 
-            <origin xyz="0.066189 -0.018040 -0.021379" rpy="0 0 0" /> 
-            <mass value="1.722535"/> 
-            <inertia  ixx="0.000104" ixy="-0.003459" ixz="0.002509" iyy="0.003188" iyz="0.001801" izz="0.000622"  />
-        </inertial> 
-      <!-- end for simulation -->
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.47"/>
+        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint6" type="revolute">
       <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-0.0175" soft_upper_limit="3.7525"/>
@@ -240,10 +191,7 @@
       <child link="${arm_id}_link6"/>
       <axis xyz="0 0 1"/>
       <limit effort="12" lower="-0.0175" upper="3.7525" velocity="2.6100"/>
-
-      <!-- for simulation -->
       <dynamics damping="${joint_damping}"/>
-      <!-- end for simulation -->
     </joint>
     <link name="${arm_id}_link7">
       <visual>
@@ -256,16 +204,11 @@
           <mesh filename="package://${description_pkg}/meshes/collision/link7.stl"/>
         </geometry>
       </collision>
-
-      <!-- for simulation -->
-        <!-- Link 7 -->
-        <!-- Generated From:  git@github.com:marcocognetti/FrankaEmikaPandaDynModel.git -->
-        <inertial> 
-            <origin xyz="0.001859 0.007351 0.055465" rpy="0 0 0" /> 
-            <mass value="0.570636"/> 
-            <inertia  ixx="0.002852" ixy="0.004632" ixz="0.002398" iyy="0.000000" iyz="-0.002696" izz="0.000000"  />
-        </inertial> 
-      <!-- end for simulation -->
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.45"/>
+        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint7" type="revolute">
       <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-2.8973" soft_upper_limit="2.8973"/>
@@ -274,19 +217,14 @@
       <child link="${arm_id}_link7"/>
       <axis xyz="0 0 1"/>
       <limit effort="12" lower="-2.8973" upper="2.8973" velocity="2.6100"/>
-
-      <!-- for simulation -->
       <dynamics damping="${joint_damping}"/>
-      <!-- end for simulation -->
     </joint>
     <link name="${arm_id}_link8">
-      <!-- for simulation -->
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="0.0" />
-        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.0"/>
+        <inertia ixx="0.3" ixy="0.0" ixz="0.0" iyy="0.3" iyz="0.0" izz="0.3"/>
       </inertial>
-      <!-- end for simulation -->
     </link>
     <joint name="${arm_id}_joint8" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0.107"/>
